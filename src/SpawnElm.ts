@@ -86,7 +86,7 @@ export function make({
 } {
   const cwd = absoluteDirname(elmJsonPath);
   const command: Command = {
-    command: "guida",
+    command: "./vendor/guida-wasm/bin/index.js",
     args: [
       "make",
       "--report=json",
@@ -376,7 +376,7 @@ export function install({
   }
 
   const command: Command = {
-    command: "guida",
+    command: "./vendor/guida-wasm/bin/index.js",
     // Don’t use `--report=json` here, because then Elm won’t print downloading
     // of packages. We unfortunately lose colors this way, but package download
     // errors aren’t very colorful anyway.
